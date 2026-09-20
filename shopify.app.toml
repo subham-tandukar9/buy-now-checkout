@@ -2,7 +2,7 @@
 # https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "54f9fee1bee52d91e4e7b2bc8e99c85e"
-application_url = "https://example.com"
+application_url = "https://buy-now-checkout.vercel.app"
 embedded = true
 name = "Buy Now Checkout"
 
@@ -10,7 +10,7 @@ name = "Buy Now Checkout"
 scopes = "write_app_proxy,unauthenticated_read_checkouts,unauthenticated_write_checkouts"
 
 [app_proxy]
-url = "/apps/buy-now"
+url = "https://buy-now-checkout.vercel.app"
 subpath = "buy-now"
 prefix = "apps"
 
@@ -27,7 +27,7 @@ api_version = "2026-10"
 
 [auth]
 redirect_urls = [
-  "https://example.com/api/auth"
+  "https://buy-now-checkout.vercel.app/auth/callback"
 ]
 
 [build]
