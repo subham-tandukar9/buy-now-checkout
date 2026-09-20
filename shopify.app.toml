@@ -10,7 +10,7 @@ name = "Buy Now Checkout"
 scopes = "write_app_proxy,unauthenticated_read_checkouts,unauthenticated_write_checkouts"
 
 [app_proxy]
-url = "https://buy-now-checkout.vercel.app"
+url = "https://buy-now-checkout.vercel.app/apps/buy-now"
 subpath = "buy-now"
 prefix = "apps"
 
