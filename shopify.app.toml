@@ -1,0 +1,34 @@
+# Learn more about configuring your app at:
+# https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "54f9fee1bee52d91e4e7b2bc8e99c85e"
+application_url = "https://example.com"
+embedded = true
+name = "Buy Now Checkout"
+
+[access_scopes]
+scopes = "write_app_proxy,unauthenticated_read_checkouts,unauthenticated_write_checkouts"
+
+[app_proxy]
+url = "/apps/buy-now"
+subpath = "buy-now"
+prefix = "apps"
+
+[webhooks]
+api_version = "2026-10"
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/app/uninstalled"
+  topics = ["app/uninstalled"]
+
+  [[webhooks.subscriptions]]
+  uri = "/webhooks/app/scopes_updated"
+  topics = ["app/scopes_update"]
+
+[auth]
+redirect_urls = [
+  "https://example.com/api/auth"
+]
+
+[build]
+automatically_update_urls_on_dev = true
